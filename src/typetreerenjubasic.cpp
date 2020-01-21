@@ -2,6 +2,8 @@
 #include <utility>
 #include <stddef.h>
 
+TypeTreeRenjuBasic::TypeTreeRenjuBasic() {}
+
 void TypeTreeRenjuBasic::setAnalyzeLength() {
     analyzeLength = 11;
 }

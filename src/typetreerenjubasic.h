@@ -13,6 +13,9 @@ class TypeTreeRenjuBasic : public TypeTree {
     /** The singleton instance. */
     static TypeTreeRenjuBasic* singleton;
 
+    /** Private constructor for singleton. */
+    TypeTreeRenjuBasic();
+
     void setAnalyzeLength();
 
     SingleType typeAnalyze(StoneStatus *status, StoneStatus color, bool checkLevel);

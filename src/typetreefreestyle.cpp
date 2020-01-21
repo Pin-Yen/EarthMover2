@@ -2,6 +2,8 @@
 #include <utility>
 #include <stddef.h>
 
+TypeTreeFreeStyle::TypeTreeFreeStyle() {}
+
 void TypeTreeFreeStyle::setAnalyzeLength() {
     analyzeLength = 9;
 }

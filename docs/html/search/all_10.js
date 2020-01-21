@@ -6,10 +6,10 @@ var searchData=
   ['typetree_57',['TypeTree',['../classTypeTree.html',1,'TypeTree'],['../classTypeTree.html#ac09427b1ce282cd5ced70298494c2ebf',1,'TypeTree::TypeTree()']]],
   ['typetree_2ecpp_58',['typetree.cpp',['../typetree_8cpp.html',1,'']]],
   ['typetree_2eh_59',['typetree.h',['../typetree_8h.html',1,'']]],
-  ['typetreefreestyle_60',['TypeTreeFreeStyle',['../classTypeTreeFreeStyle.html',1,'']]],
+  ['typetreefreestyle_60',['TypeTreeFreeStyle',['../classTypeTreeFreeStyle.html',1,'TypeTreeFreeStyle'],['../classTypeTreeFreeStyle.html#a8fcdda758404329ebfcc1a61b8930f35',1,'TypeTreeFreeStyle::TypeTreeFreeStyle()']]],
   ['typetreefreestyle_2ecpp_61',['typetreefreestyle.cpp',['../typetreefreestyle_8cpp.html',1,'']]],
   ['typetreefreestyle_2eh_62',['typetreefreestyle.h',['../typetreefreestyle_8h.html',1,'']]],
-  ['typetreerenjubasic_63',['TypeTreeRenjuBasic',['../classTypeTreeRenjuBasic.html',1,'']]],
+  ['typetreerenjubasic_63',['TypeTreeRenjuBasic',['../classTypeTreeRenjuBasic.html',1,'TypeTreeRenjuBasic'],['../classTypeTreeRenjuBasic.html#ad1f865b9148a8c820929072e730361e4',1,'TypeTreeRenjuBasic::TypeTreeRenjuBasic()']]],
   ['typetreerenjubasic_2ecpp_64',['typetreerenjubasic.cpp',['../typetreerenjubasic_8cpp.html',1,'']]],
   ['typetreerenjubasic_2eh_65',['typetreerenjubasic.h',['../typetreerenjubasic_8h.html',1,'']]]
 ];

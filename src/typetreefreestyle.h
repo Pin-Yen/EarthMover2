@@ -13,6 +13,8 @@ class TypeTreeFreeStyle : public TypeTree {
     /** The singleton instance. */
     static TypeTreeFreeStyle* singleton;
 
+    TypeTreeFreeStyle();
+
     void setAnalyzeLength();
 
     SingleType typeAnalyze(StoneStatus *status, StoneStatus color, bool checkLevel);
