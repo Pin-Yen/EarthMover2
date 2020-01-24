@@ -1,10 +1,12 @@
-#ifndef TYPETREE_H
-#define TYPETREE_H
+#ifndef TYPETREE_H_
+#define TYPETREE_H_
 
-#include "stonestatus.h"
-#include "chesstype.h"
-#include "point.h"
 #include <stddef.h>
+
+#include "chesstype.h"
+#include "enum.h"
+#include "point.h"
+#include "virtualboard.h"
 
 class TypeTree {
  public:
@@ -12,32 +14,34 @@ class TypeTree {
     
     /**
      * Classifies the type of the given point.
+     * Sets the classified result on analyzePoint.
      * @param analyzePoint The point to be analyzed.
      * @param neighborAccessor Controls which direction of the point is analyzed.
-     * @return The classify result.
+     * 
      */
-    ChessType classify(Point *analyzePoint, NeighborAccessor *neighborAccessor);
+    ChessType classify(Point *analyzePoint, VirtualBoard::NeighborIterator& neighborIterator);
 
+    int analyzeLength() { return analyzeLength_; }
  protected:
     struct Node {
         // Next point occupied by:
         // 0: black, 1: white, 2:empty 3: bound
-        Node *childNode[4];
+        Node *childNode_[4];
 
-        ChessType type;
+        ChessType type_;
 
-        bool jump, leaf;
+        bool jump_, leaf_;
 
-        Node(): jump(false), leaf(false) {
+        Node(): jump_(false), leaf_(false) {
           for (int i = 0; i < 4; ++i)
-            childNode[i] = NULL;
+            childNode_[i] = NULL;
         }
 
         ~Node() {
           for (int i = 0; i < 4; ++i) {
-            if (childNode[i] != NULL) {
-              delete childNode[i];
-              childNode[i] = NULL;
+            if (childNode_[i] != NULL) {
+              delete childNode_[i];
+              childNode_[i] = NULL;
             }
           }
         }
@@ -71,7 +75,7 @@ class TypeTree {
      */
     virtual SingleType typeAnalyze(StoneStatus *status, StoneStatus color, bool checkLevel) = 0;
     
-    int analyzeLength;
+    int analyzeLength_;
 
  private:
     /** 
@@ -92,7 +96,7 @@ class TypeTree {
     void dfsGrowTree(Node *node, StoneStatus *status, int location, int move,
                      int blackConnect, int whiteConnect, bool blackBlock, bool whiteBlock);
 
-    Node* root; /* The root of the tree */
+    Node* root_; /* The root of the tree */
 };
 
 #endif

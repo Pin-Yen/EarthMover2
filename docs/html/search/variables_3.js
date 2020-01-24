@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['leaf_134',['leaf',['../structTypeTree_1_1Node.html#ac4eeb356aae9d9feda796a65cddda93a',1,'TypeTree::Node']]],
-  ['length_5f_135',['length_',['../classSingleType.html#a8126b30fb9bd3b4432686a56830bfdc4',1,'SingleType']]],
-  ['level_5f_136',['level_',['../classSingleType.html#a1b201bc90266fb8744aa7733054e2c64',1,'SingleType']]],
-  ['life_5f_137',['life_',['../classSingleType.html#a1fdb15f7e4b477c0405c4e35423e67f7',1,'SingleType']]]
+  ['dimen_5f_249',['dimen_',['../classVirtualBoard.html#ad56b334060523b750e10d9817ebd158c',1,'VirtualBoard']]],
+  ['direction_5f_250',['direction_',['../classVirtualBoard_1_1NeighborIterator.html#aa63b4b60431212c1264283c12023547a',1,'VirtualBoard::NeighborIterator']]]
 ];

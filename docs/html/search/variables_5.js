@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['root_139',['root',['../classTypeTree.html#a7b00d52fa528a69bfb9e8286c37abf84',1,'TypeTree']]]
+  ['isinit_5f_252',['isInit_',['../classOpeningTree.html#a85be5fc9fe1c28fca01321058ebedeba',1,'OpeningTree']]]
 ];

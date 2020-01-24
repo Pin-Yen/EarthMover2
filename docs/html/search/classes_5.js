@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['singletype_78',['SingleType',['../classSingleType.html',1,'']]]
+  ['singletype_143',['SingleType',['../classSingleType.html',1,'']]]
 ];

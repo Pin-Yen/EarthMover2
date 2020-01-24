@@ -1,19 +1,29 @@
 #include "typetree.h"
+#include <iostream>
+#include <cassert>
 
 TypeTree::TypeTree() {
 }
 
+void TypeTree::init() {
+    root_ = new TypeTree::Node();
+    setAnalyzeLength();
+    plantTree();
+    cutSameResultChild(root_);
+    std::cerr << "Done initializing TypeTree..." << std::endl;
+}
+
 ChessType* TypeTree::cutSameResultChild(TypeTree::Node *node) {
-    if (node->leaf)
-        return &(node->type);
+    if (node->leaf_)
+        return &(node->type_);
 
     ChessType *currentType = NULL;
     bool canCut = true;
 
     for (int i = 0; i < 4; ++i)
-        if (node->childNode[i] != NULL) {
+        if (node->childNode_[i] != NULL) {
           // Check if the child subtree can be trimmed.
-          ChessType* returnType = cutSameResultChild(node->childNode[i]);
+          ChessType* returnType = cutSameResultChild(node->childNode_[i]);
 
         if (returnType == NULL)
             // if children cannot be cut, then this node also cannot be cut
@@ -27,16 +37,16 @@ ChessType* TypeTree::cutSameResultChild(TypeTree::Node *node) {
 
     if (!canCut) return NULL;
       // cut this node, free all children and set this node's type
-    node->type = ChessType(*currentType);
+    node->type_ = ChessType(*currentType);
 
-    node->leaf = true;
+    node->leaf_ = true;
 
-    currentType = &(node->type);
+    currentType = &(node->type_);
 
     for (int i = 0; i < 4; ++i)
-        if (node->childNode[i] != NULL) {
-          delete node->childNode[i];
-          node->childNode[i] = NULL;
+        if (node->childNode_[i] != NULL) {
+          delete node->childNode_[i];
+          node->childNode_[i] = NULL;
       }
 
       return currentType;
@@ -44,12 +54,12 @@ ChessType* TypeTree::cutSameResultChild(TypeTree::Node *node) {
 
 void TypeTree::plantTree() {
     // create tree seed
-    StoneStatus status[analyzeLength];
-    for (int i = 0; i < analyzeLength; ++i)
+    StoneStatus status[analyzeLength_];
+    for (int i = 0; i < analyzeLength_; ++i)
         status[i] = EMPTY;
 
     // grow tree
-    dfsGrowTree(root, status, analyzeLength / 2, -1, 0, 0, false, false);
+    dfsGrowTree(root_, status, analyzeLength_ / 2, -1, 0, 0, false, false);
 }
 
 void TypeTree::dfsGrowTree(
@@ -64,25 +74,25 @@ void TypeTree::dfsGrowTree(
   }
 
   if ((blackBlock && whiteBlock) || status[location] == BOUND ||
-      location <= 0 || location >= analyzeLength - 1) {
+      location <= 0 || location >= analyzeLength_ - 1) {
     if (move == 1) {
       // reached leaf
 
       // set type
       SingleType bType = typeAnalyze(status, BLACK, true),
                  wType = typeAnalyze(status, WHITE, true);
-      node->type = ChessType(bType, wType);
+      node->type_ = ChessType(bType, wType);
 
-      node->leaf = true;
+      node->leaf_ = true;
 
       return;
     } else {
       // set this node to jump node
-      node->jump = true;
+      node->jump_ = true;
 
       // jump to middle of the status
       move += 2;
-      location = analyzeLength / 2;
+      location = analyzeLength_ / 2;
 
       // reset block
       blackBlock = false; whiteBlock = false;
@@ -111,9 +121,9 @@ void TypeTree::dfsGrowTree(
     if ((i == 0 && blackConnect >= 4) || (i == 1 && whiteConnect >= 4))
       continue;
 
-    node->childNode[i] = new Node();
+    node->childNode_[i] = new Node();
     status[location] = s[i];
-    dfsGrowTree(node->childNode[i], status, location, move,
+    dfsGrowTree(node->childNode_[i], status, location, move,
         blackConnect, whiteConnect, blackBlock, whiteBlock);
   }
 
@@ -124,40 +134,44 @@ void TypeTree::dfsGrowTree(
   status[location] = EMPTY;
 }
 
-void TypeTree::init() {
-    setAnalyzeLength();
-    root = new Node;
-    plantTree();
-    cutSameResultChild(root);    
-}
+// DEPRECATED
+// void TypeTree::init() {
+//     setAnalyzeLength();
+//     root_ = new Node;
+//     plantTree();
+//     cutSameResultChild(root_);    
+// }
 
-ChessType TypeTree::classify(Point *analyzePoint, NeighborAccessor* neighborAccessor) {
-    Node* node = root;
+ChessType TypeTree::classify(Point *analyzePoint, VirtualBoard::NeighborIterator& neighborIterator) {
+    Node* node = root_;
 
-    // Current point is initialized to the backward of analyzePoint
-    Point *currentPoint = neighborAccessor->backward(analyzePoint);
+    Point *currentPoint;
 
     for (int dir=0; dir < 2; ++dir) {
-        for (int i=0; i < analyzeLength/2 && currentPoint != NULL; ++i) {
+        currentPoint = neighborIterator.next();
+        for (int i=0; i < analyzeLength_ /2; ++i) {
             // Enter the child node acording to the status of current point.
-            node = node->childNode[currentPoint->status()];
+            if (currentPoint != NULL) {
+              node = node->childNode_[currentPoint->status()];
+            } else {
+              node = node->childNode_[BOUND];
+            }
 
             // if reach leaf, return type
-            if (node->leaf) 
-                return ChessType(node->type);
+            if (node->leaf_)  
+                return ChessType(node->type_);
 
             // if reach different color, change direction
-            if (node->jump)
+            if (node->jump_)
                 break;
     
-            if (dir==0)
-                currentPoint = neighborAccessor->backward(currentPoint);
-            else
-                currentPoint = neighborAccessor->forward(currentPoint);
+            currentPoint = neighborIterator.next();
         }
 
-        // Change direction: reset the current point to forward of analyze point.    
-        currentPoint = neighborAccessor->forward(analyzePoint);
+        // Change direction and reposition iterator to origin position(analyze point).    
+        neighborIterator.resetAndReverse();
     }
+
+    assert(0);
 }
 

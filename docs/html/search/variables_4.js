@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['neighbor_138',['neighbor',['../classPoint.html#a2787e0063d885ea6925f385bc1fc7acc',1,'Point']]]
+  ['evaluator_5f_251',['evaluator_',['../classVirtualBoardHeuristic.html#a528bbf987014838718282a13a85c499e',1,'VirtualBoardHeuristic']]]
 ];

@@ -1,9 +1,13 @@
 <map id="src/typetreerenjubasic.h" name="src/typetreerenjubasic.h">
-<area shape="rect" id="node1" title=" " alt="" coords="87,5,249,32"/>
-<area shape="rect" id="node2" href="$chesstype_8h.html" title=" " alt="" coords="239,229,332,256"/>
-<area shape="rect" id="node4" href="$stonestatus_8h.html" title=" " alt="" coords="5,229,107,256"/>
-<area shape="rect" id="node5" href="$typetree_8h.html" title=" " alt="" coords="128,80,208,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="253,304,318,331"/>
-<area shape="rect" id="node6" href="$point_8h.html" title=" " alt="" coords="93,155,155,181"/>
-<area shape="rect" id="node7" title=" " alt="" coords="179,155,248,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="118,5,279,32"/>
+<area shape="rect" id="node2" href="$chesstype_8h.html" title=" " alt="" coords="5,304,99,331"/>
+<area shape="rect" id="node4" href="$enum_8h.html" title=" " alt="" coords="438,304,503,331"/>
+<area shape="rect" id="node5" href="$typetree_8h.html" title=" " alt="" coords="159,80,239,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="19,379,85,405"/>
+<area shape="rect" id="node6" title=" " alt="" coords="92,155,161,181"/>
+<area shape="rect" id="node7" href="$point_8h.html" title=" " alt="" coords="89,229,151,256"/>
+<area shape="rect" id="node8" href="$virtualboard_8h.html" title=" " alt="" coords="238,155,338,181"/>
+<area shape="rect" id="node9" title=" " alt="" coords="258,229,323,256"/>
+<area shape="rect" id="node10" title=" " alt="" coords="347,229,407,256"/>
+<area shape="rect" id="node11" title=" " alt="" coords="175,229,233,256"/>
 </map>

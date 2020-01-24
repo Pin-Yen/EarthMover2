@@ -50,7 +50,7 @@ OBJ = $(SRC:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
 TEST_SRC = $(wildcard $(TEST_SRC_DIR)/*.cpp)
 TEST_OBJ = $(TEST_SRC:$(TEST_SRC_DIR)/%.cpp=$(TEST_OBJ_DIR)/%.o)
 CC=g++
-CPPFLAGS += -Isrc
+CPPFLAGS += -Isrc -g -O0
 CFLAGS += -std=c++17
 # LDFLAGS += -Llib
 # LDLIBS += -lm
@@ -65,6 +65,8 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp obj_dir
 test_typetree: $(OBJ)
 	$(CC) $(TEST_SRC_DIR)/testtypetree.cpp $(CPPFLAGS) $(LDFLAGS) $^ $(LDLIBS) -o $@
 
+test_virtualboard: $(OBJ)
+	$(CC) $(TEST_SRC_DIR)/testvirtualboard.cpp $(CPPFLAGS)  $(LDFLAGS) $^ $(LDLIBS) -o $@
 
 $(TESTOBJ_DIR)/%.o: $(TEST_SRC_DIR)/%.cpp testobj_dir
 	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@

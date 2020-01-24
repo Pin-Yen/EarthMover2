@@ -1,17 +1,16 @@
 var searchData=
 [
-  ['score_40',['score',['../classPoint.html#a75d2c8c3fd527cb5dc19a1ca59217a5a',1,'Point']]],
-  ['score_5f_41',['score_',['../classPoint.html#af55773458abd8272b574835b79499287',1,'Point']]],
-  ['setabsscore_42',['setAbsScore',['../classPoint.html#a556da216f07bb99560c318eaedf0de04',1,'Point']]],
-  ['setanalyzelength_43',['setAnalyzeLength',['../classTypeTree.html#ad43a040a01c32e6217a48bca3b8e7e3c',1,'TypeTree::setAnalyzeLength()'],['../classTypeTreeFreeStyle.html#a4271627fd528bed8d30925b2f299c85f',1,'TypeTreeFreeStyle::setAnalyzeLength()'],['../classTypeTreeRenjuBasic.html#a63382719f231674890afd5225d6844f8',1,'TypeTreeRenjuBasic::setAnalyzeLength()']]],
-  ['setneighbor_44',['setNeighbor',['../classPoint.html#a233858fcd61671173e97bac1b2f8b137',1,'Point']]],
-  ['setscore_45',['setScore',['../classPoint.html#af3621c6aa6bedde4cc898b999aff895d',1,'Point']]],
-  ['setstatus_46',['setStatus',['../classPoint.html#a8aab0e4e50ddbf3b274a52e3ccce97a9',1,'Point']]],
-  ['singleton_47',['singleton',['../classTypeTreeFreeStyle.html#af5f13b104b04e427f331a65c61b2565e',1,'TypeTreeFreeStyle::singleton()'],['../classTypeTreeRenjuBasic.html#a77572d4104d9e1df7e2e358f74de58d2',1,'TypeTreeRenjuBasic::singleton()']]],
-  ['singletype_48',['SingleType',['../classSingleType.html',1,'SingleType'],['../classSingleType.html#adaffe2c7234b72494437ca52d7447477',1,'SingleType::SingleType()'],['../classSingleType.html#af25f36a756b38afd3c383533057e7e0e',1,'SingleType::SingleType(int8_t length, int8_t life, int8_t level)'],['../classSingleType.html#a703e2ccabea37e79ac6573e9b4443653',1,'SingleType::SingleType(const SingleType &amp;source)']]],
-  ['status_49',['status',['../classPoint.html#aa15932becb0632b29387a22495a9c7ab',1,'Point']]],
-  ['status_5f_50',['status_',['../classPoint.html#a02bf442f387cdf12f3d21286e913a462',1,'Point']]],
-  ['statusref_51',['statusRef',['../classPoint.html#a8508d983d0eabe19a7a3c8d9f5e9ad9c',1,'Point']]],
-  ['stonestatus_52',['StoneStatus',['../stonestatus_8h.html#ab16036062650d7ebef4da2227ef2a0d1',1,'stonestatus.h']]],
-  ['stonestatus_2eh_53',['stonestatus.h',['../stonestatus_8h.html',1,'']]]
+  ['type_103',['type',['../classPoint.html#a648eaedafd40989aceec90be478c4f9c',1,'Point::type(int index)'],['../classPoint.html#a285dd87c904cbcd7df1b23fa7596c9d2',1,'Point::type()']]],
+  ['type_5f_104',['type_',['../classChessType.html#a56888073cbdfb36e0e6f49b15c234252',1,'ChessType::type_()'],['../classPoint.html#ac1482a15a83f8c4e0a7bfcdd75dc0694',1,'Point::type_()'],['../structTypeTree_1_1Node.html#ae9e627e34e55c2015b802a996e423308',1,'TypeTree::Node::type_()']]],
+  ['typeanalyze_105',['typeAnalyze',['../classTypeTree.html#a13b23082539e2a39d4e6fdbfcd0a34bd',1,'TypeTree::typeAnalyze()'],['../classTypeTreeFreeStyle.html#af9ee0cc71889cadb49c0b6c0f4572d6a',1,'TypeTreeFreeStyle::typeAnalyze()'],['../classTypeTreeRenjuBasic.html#ab218fd0c0f2a06aa15d6debcba228235',1,'TypeTreeRenjuBasic::typeAnalyze()']]],
+  ['typetree_106',['TypeTree',['../classTypeTree.html',1,'TypeTree'],['../classTypeTree.html#ac09427b1ce282cd5ced70298494c2ebf',1,'TypeTree::TypeTree()']]],
+  ['typetree_2ecpp_107',['typetree.cpp',['../typetree_8cpp.html',1,'']]],
+  ['typetree_2eh_108',['typetree.h',['../typetree_8h.html',1,'']]],
+  ['typetree_5f_109',['typeTree_',['../classVirtualBoardHeuristic.html#a37efe824d2673853fc3a11f66352c559',1,'VirtualBoardHeuristic']]],
+  ['typetreefreestyle_110',['TypeTreeFreeStyle',['../classTypeTreeFreeStyle.html',1,'TypeTreeFreeStyle'],['../classTypeTreeFreeStyle.html#a8fcdda758404329ebfcc1a61b8930f35',1,'TypeTreeFreeStyle::TypeTreeFreeStyle()']]],
+  ['typetreefreestyle_2ecpp_111',['typetreefreestyle.cpp',['../typetreefreestyle_8cpp.html',1,'']]],
+  ['typetreefreestyle_2eh_112',['typetreefreestyle.h',['../typetreefreestyle_8h.html',1,'']]],
+  ['typetreerenjubasic_113',['TypeTreeRenjuBasic',['../classTypeTreeRenjuBasic.html',1,'TypeTreeRenjuBasic'],['../classTypeTreeRenjuBasic.html#ad1f865b9148a8c820929072e730361e4',1,'TypeTreeRenjuBasic::TypeTreeRenjuBasic()']]],
+  ['typetreerenjubasic_2ecpp_114',['typetreerenjubasic.cpp',['../typetreerenjubasic_8cpp.html',1,'']]],
+  ['typetreerenjubasic_2eh_115',['typetreerenjubasic.h',['../typetreerenjubasic_8h.html',1,'']]]
 ];

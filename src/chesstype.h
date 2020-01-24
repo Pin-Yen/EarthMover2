@@ -1,5 +1,5 @@
-#ifndef GOMOKU_CHESSTYPE_H_
-#define GOMOKU_CHESSTYPE_H_
+#ifndef CHESSTYPE_H_
+#define CHESSTYPE_H_
 
 #include <stdint.h>
 
@@ -62,7 +62,8 @@ class SingleType {
 
 class ChessType {
  public:
-  ChessType() {}
+  ChessType() {
+  }
 
   ChessType(const ChessType& type) {
     type_[0] = SingleType(type.type_[0]);
@@ -92,4 +93,4 @@ class ChessType {
   SingleType type_[2];
 };
 
-#endif  // GOMOKU_CHESSTYPE_H_
+#endif  // CHESSTYPE_H_

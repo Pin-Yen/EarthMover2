@@ -5,19 +5,19 @@
 TypeTreeRenjuBasic::TypeTreeRenjuBasic() {}
 
 void TypeTreeRenjuBasic::setAnalyzeLength() {
-    analyzeLength = 11;
+    analyzeLength_ = 11;
 }
 
 // initialize singleton instance to NULL
-TypeTreeRenjuBasic* TypeTreeRenjuBasic::singleton = NULL;
+TypeTreeRenjuBasic* TypeTreeRenjuBasic::singleton_ = NULL;
 
 TypeTreeRenjuBasic* TypeTreeRenjuBasic::getInstance() {
-  if (TypeTreeRenjuBasic::singleton == NULL) {
-    TypeTreeRenjuBasic::singleton = new TypeTreeRenjuBasic();
-    TypeTreeRenjuBasic::singleton->init();
+  if (TypeTreeRenjuBasic::singleton_ == NULL) {
+    TypeTreeRenjuBasic::singleton_ = new TypeTreeRenjuBasic();
+    TypeTreeRenjuBasic::singleton_->init();
   }
 
-  return TypeTreeRenjuBasic::singleton;
+  return TypeTreeRenjuBasic::singleton_;
 }
 
 SingleType TypeTreeRenjuBasic::typeAnalyze(StoneStatus *status,
@@ -28,7 +28,7 @@ SingleType TypeTreeRenjuBasic::typeAnalyze(StoneStatus *status,
   // under the following, we call this chess group "center group" (CG)
   // for example: --X O*OOX-- ; OOOO* O X
   //                  ^^^^      ^^^^^
-  for (int move = -1, start = analyzeLength / 2 - 1;
+  for (int move = -1, start = analyzeLength_ / 2 - 1;
        move <= 1; move += 2, start += 2) {
     for (int i = 0, checkPoint = start; i < 4; ++i, checkPoint += move) {
       if (status[checkPoint] != color) break;
@@ -49,8 +49,8 @@ SingleType TypeTreeRenjuBasic::typeAnalyze(StoneStatus *status,
   } else {
     // CG's length < 5
 
-    // play at the analize point
-    status[analyzeLength / 2] = color;
+    // play at the analyze point
+    status[analyzeLength_ / 2] = color;
 
     // try to find the left and right bound of CG
     // if it's empty, see this point as new analize point
@@ -59,7 +59,7 @@ SingleType TypeTreeRenjuBasic::typeAnalyze(StoneStatus *status,
     bool lInit = false, rInit = false;
     int level = 0;
 
-    for (int move = -1, start = analyzeLength / 2 - 1;
+    for (int move = -1, start = analyzeLength_ / 2 - 1;
          move <= 1; move += 2, start += 2) {
       for (int count = 0, checkPoint = start;
            count < 4; ++count, checkPoint += move) {
@@ -71,14 +71,14 @@ SingleType TypeTreeRenjuBasic::typeAnalyze(StoneStatus *status,
           // if the bound is an empty point
           if (status[checkPoint] == EMPTY) {
             // make a new status array
-            StoneStatus newStatus[analyzeLength];
+            StoneStatus newStatus[analyzeLength_];
 
             // transform from origin status
-            for (int i = 0; i < analyzeLength; ++i) {
-              int transformation_index = i - (analyzeLength / 2 - checkPoint);
+            for (int i = 0; i < analyzeLength_; ++i) {
+              int transformation_index = i - (analyzeLength_ / 2 - checkPoint);
 
               if (transformation_index < 0 ||
-                  transformation_index >= analyzeLength)
+                  transformation_index >= analyzeLength_)
                   // if out of bound, set it to Bound
                 newStatus[i] = BOUND;
               else
@@ -134,7 +134,7 @@ SingleType TypeTreeRenjuBasic::typeAnalyze(StoneStatus *status,
     }
 
     // restore the analize point to empty
-    status[analyzeLength / 2] = EMPTY;
+    status[analyzeLength_ / 2] = EMPTY;
 
     // keep lType > rType
     if (lType < rType)

@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['type_143',['type',['../structTypeTree_1_1Node.html#aeb7fddec9461be1815fa0ec6c8131303',1,'TypeTree::Node']]],
-  ['type_5f_144',['type_',['../classChessType.html#a56888073cbdfb36e0e6f49b15c234252',1,'ChessType::type_()'],['../classPoint.html#ac1482a15a83f8c4e0a7bfcdd75dc0694',1,'Point::type_()']]]
+  ['leaf_5f_254',['leaf_',['../structTypeTree_1_1Node.html#a7c26ee8a1d3803e6262287dc7f5d4cd0',1,'TypeTree::Node']]],
+  ['length_5f_255',['length_',['../classSingleType.html#a8126b30fb9bd3b4432686a56830bfdc4',1,'SingleType']]],
+  ['level_5f_256',['level_',['../classSingleType.html#a1b201bc90266fb8744aa7733054e2c64',1,'SingleType']]],
+  ['life_5f_257',['life_',['../classSingleType.html#a1fdb15f7e4b477c0405c4e35423e67f7',1,'SingleType']]]
 ];

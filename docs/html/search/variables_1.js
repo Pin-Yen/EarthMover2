@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['childnode_132',['childNode',['../structTypeTree_1_1Node.html#a7b0a3b9483b39bac3420d12fa57f49ac',1,'TypeTree::Node']]]
+  ['board_5f_245',['board_',['../classVirtualBoard_1_1NeighborIterator.html#a6b02559fcb7c07671f67c48c95cf7b39',1,'VirtualBoard::NeighborIterator']]]
 ];

@@ -1,0 +1,32 @@
+  for (int d = 0; d < 4; ++d)
+    for (int move = -1; move <= 1; move += 2) {
+      bool block[2] = {false, false};
+
+      for (int offset = 1; offset <= (StatusLength / 2) + 1; ++offset) {
+        const int checkRow = row + dir[d][0] * move * offset,
+                  checkCol = col + dir[d][1] * move * offset;
+
+        // check if out the bound
+        if (outOfBound(checkRow, checkCol)) break;
+
+        const int checkIndex = checkRow * DIMEN + checkCol;
+
+        // check if block
+        if (point_[checkIndex].status() != EMPTY) {
+          block[point_[checkIndex].status()] = true;
+
+          if (block[0] & block[1]) break;
+
+          continue;
+        }
+
+        // get status array
+        StoneStatus status[StatusLength];
+        point_[checkIndex].getDirStatus(d, status);
+
+        point_[checkIndex].type(d) = Eva::evaluateType(status);
+
+        Eva::evaluateScore(point_[checkIndex].type(),
+                           point_[checkIndex].absScore());
+      }
+    }

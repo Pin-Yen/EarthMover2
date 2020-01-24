@@ -69,11 +69,11 @@ $(function() {
 <div class="title">typetreerenjubasic.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="typetreerenjubasic_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef TYPETREE_RENJUBASIC_H</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define TYPETREE_RENJUBASIC_H</span></div>
+<a href="typetreerenjubasic_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef TYPETREE_RENJUBASIC_H_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define TYPETREE_RENJUBASIC_H_</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="chesstype_8h.html">chesstype.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="stonestatus_8h.html">stonestatus.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="enum_8h.html">enum.h</a>&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="typetree_8h.html">typetree.h</a>&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classTypeTreeRenjuBasic.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTypeTreeRenjuBasic.html">TypeTreeRenjuBasic</a> : <span class="keyword">public</span> <a class="code" href="classTypeTree.html">TypeTree</a> {</div>
@@ -81,30 +81,30 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">static</span> <a class="code" href="classTypeTreeRenjuBasic.html">TypeTreeRenjuBasic</a>* <a class="code" href="classTypeTreeRenjuBasic.html#af6b6f0b47faffdbe216db8bb0f59d6dc">getInstance</a>();</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classTypeTreeRenjuBasic.html#a77572d4104d9e1df7e2e358f74de58d2">   14</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classTypeTreeRenjuBasic.html">TypeTreeRenjuBasic</a>* <a class="code" href="classTypeTreeRenjuBasic.html#a77572d4104d9e1df7e2e358f74de58d2">singleton</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classTypeTreeRenjuBasic.html#af35937cd50a4076cdcbae753e7dc76af">   14</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classTypeTreeRenjuBasic.html">TypeTreeRenjuBasic</a>* <a class="code" href="classTypeTreeRenjuBasic.html#af35937cd50a4076cdcbae753e7dc76af">singleton_</a>;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="classTypeTreeRenjuBasic.html#ad1f865b9148a8c820929072e730361e4">TypeTreeRenjuBasic</a>();</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTypeTreeRenjuBasic.html#a63382719f231674890afd5225d6844f8">setAnalyzeLength</a>();</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classSingleType.html">SingleType</a> <a class="code" href="classTypeTreeRenjuBasic.html#ab218fd0c0f2a06aa15d6debcba228235">typeAnalyze</a>(<a class="code" href="stonestatus_8h.html#ab16036062650d7ebef4da2227ef2a0d1">StoneStatus</a> *status, <a class="code" href="stonestatus_8h.html#ab16036062650d7ebef4da2227ef2a0d1">StoneStatus</a> color, <span class="keywordtype">bool</span> checkLevel);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classSingleType.html">SingleType</a> <a class="code" href="classTypeTreeRenjuBasic.html#ab218fd0c0f2a06aa15d6debcba228235">typeAnalyze</a>(<a class="code" href="enum_8h.html#ab16036062650d7ebef4da2227ef2a0d1">StoneStatus</a> *status, <a class="code" href="enum_8h.html#ab16036062650d7ebef4da2227ef2a0d1">StoneStatus</a> color, <span class="keywordtype">bool</span> checkLevel);</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="astonestatus_8h_html_ab16036062650d7ebef4da2227ef2a0d1"><div class="ttname"><a href="stonestatus_8h.html#ab16036062650d7ebef4da2227ef2a0d1">StoneStatus</a></div><div class="ttdeci">StoneStatus</div><div class="ttdef"><b>Definition:</b> stonestatus.h:3</div></div>
+<div class="ttc" id="aenum_8h_html_ab16036062650d7ebef4da2227ef2a0d1"><div class="ttname"><a href="enum_8h.html#ab16036062650d7ebef4da2227ef2a0d1">StoneStatus</a></div><div class="ttdeci">StoneStatus</div><div class="ttdef"><b>Definition:</b> enum.h:4</div></div>
 <div class="ttc" id="aclassSingleType_html"><div class="ttname"><a href="classSingleType.html">SingleType</a></div><div class="ttdef"><b>Definition:</b> chesstype.h:6</div></div>
 <div class="ttc" id="aclassTypeTreeRenjuBasic_html"><div class="ttname"><a href="classTypeTreeRenjuBasic.html">TypeTreeRenjuBasic</a></div><div class="ttdef"><b>Definition:</b> typetreerenjubasic.h:8</div></div>
-<div class="ttc" id="aclassTypeTree_html"><div class="ttname"><a href="classTypeTree.html">TypeTree</a></div><div class="ttdef"><b>Definition:</b> typetree.h:9</div></div>
+<div class="ttc" id="aclassTypeTree_html"><div class="ttname"><a href="classTypeTree.html">TypeTree</a></div><div class="ttdef"><b>Definition:</b> typetree.h:11</div></div>
 <div class="ttc" id="aclassTypeTreeRenjuBasic_html_ab218fd0c0f2a06aa15d6debcba228235"><div class="ttname"><a href="classTypeTreeRenjuBasic.html#ab218fd0c0f2a06aa15d6debcba228235">TypeTreeRenjuBasic::typeAnalyze</a></div><div class="ttdeci">SingleType typeAnalyze(StoneStatus *status, StoneStatus color, bool checkLevel)</div><div class="ttdef"><b>Definition:</b> typetreerenjubasic.cpp:23</div></div>
 <div class="ttc" id="aclassTypeTreeRenjuBasic_html_a63382719f231674890afd5225d6844f8"><div class="ttname"><a href="classTypeTreeRenjuBasic.html#a63382719f231674890afd5225d6844f8">TypeTreeRenjuBasic::setAnalyzeLength</a></div><div class="ttdeci">void setAnalyzeLength()</div><div class="ttdef"><b>Definition:</b> typetreerenjubasic.cpp:7</div></div>
+<div class="ttc" id="aclassTypeTreeRenjuBasic_html_af35937cd50a4076cdcbae753e7dc76af"><div class="ttname"><a href="classTypeTreeRenjuBasic.html#af35937cd50a4076cdcbae753e7dc76af">TypeTreeRenjuBasic::singleton_</a></div><div class="ttdeci">static TypeTreeRenjuBasic * singleton_</div><div class="ttdef"><b>Definition:</b> typetreerenjubasic.h:14</div></div>
 <div class="ttc" id="achesstype_8h_html"><div class="ttname"><a href="chesstype_8h.html">chesstype.h</a></div></div>
 <div class="ttc" id="aclassTypeTreeRenjuBasic_html_ad1f865b9148a8c820929072e730361e4"><div class="ttname"><a href="classTypeTreeRenjuBasic.html#ad1f865b9148a8c820929072e730361e4">TypeTreeRenjuBasic::TypeTreeRenjuBasic</a></div><div class="ttdeci">TypeTreeRenjuBasic()</div><div class="ttdef"><b>Definition:</b> typetreerenjubasic.cpp:5</div></div>
-<div class="ttc" id="astonestatus_8h_html"><div class="ttname"><a href="stonestatus_8h.html">stonestatus.h</a></div></div>
 <div class="ttc" id="aclassTypeTreeRenjuBasic_html_af6b6f0b47faffdbe216db8bb0f59d6dc"><div class="ttname"><a href="classTypeTreeRenjuBasic.html#af6b6f0b47faffdbe216db8bb0f59d6dc">TypeTreeRenjuBasic::getInstance</a></div><div class="ttdeci">static TypeTreeRenjuBasic * getInstance()</div><div class="ttdef"><b>Definition:</b> typetreerenjubasic.cpp:14</div></div>
 <div class="ttc" id="atypetree_8h_html"><div class="ttname"><a href="typetree_8h.html">typetree.h</a></div></div>
-<div class="ttc" id="aclassTypeTreeRenjuBasic_html_a77572d4104d9e1df7e2e358f74de58d2"><div class="ttname"><a href="classTypeTreeRenjuBasic.html#a77572d4104d9e1df7e2e358f74de58d2">TypeTreeRenjuBasic::singleton</a></div><div class="ttdeci">static TypeTreeRenjuBasic * singleton</div><div class="ttdef"><b>Definition:</b> typetreerenjubasic.h:14</div></div>
+<div class="ttc" id="aenum_8h_html"><div class="ttname"><a href="enum_8h.html">enum.h</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

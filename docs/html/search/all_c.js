@@ -1,9 +1,10 @@
 var searchData=
 [
-  ['operator_21_3d_30',['operator!=',['../classSingleType.html#a3178ac3faf1cb0fced58fc0a0863ee3e',1,'SingleType::operator!=()'],['../classChessType.html#abbd39790be612d5a1a72580184337161',1,'ChessType::operator!=()']]],
-  ['operator_3c_31',['operator&lt;',['../classSingleType.html#a2d22330b1cb7000fea1935b31bb9de55',1,'SingleType']]],
-  ['operator_3c_3d_32',['operator&lt;=',['../classSingleType.html#a088c71aeba2fbec842fbb0ad06b10da0',1,'SingleType']]],
-  ['operator_3d_3d_33',['operator==',['../classSingleType.html#a34cfc05445689af19a28708512cf3483',1,'SingleType::operator==()'],['../classChessType.html#a7b61eea72f56ce80dd8d54c19ccc9bf5',1,'ChessType::operator==()']]],
-  ['operator_3e_34',['operator&gt;',['../classSingleType.html#a6f69e27fb0b38b220a579835f880af4c',1,'SingleType']]],
-  ['operator_3e_3d_35',['operator&gt;=',['../classSingleType.html#abf7f14210ecb4e509f79571c6d98df0d',1,'SingleType']]]
+  ['pass_69',['pass',['../classVirtualBoard.html#ae58b9308dfa4ee17e3cae1ae741c2a5c',1,'VirtualBoard']]],
+  ['planttree_70',['plantTree',['../classTypeTree.html#a82dc2e79ac389780183781cfb8e6f273',1,'TypeTree']]],
+  ['play_71',['play',['../classVirtualBoard.html#ab9e39fef2e35241d73fa129d2c6619f4',1,'VirtualBoard::play()'],['../classVirtualBoardHeuristic.html#ade08a0258e54dc99c8c543ae663f8bf5',1,'VirtualBoardHeuristic::play()']]],
+  ['playnumber_5f_72',['playNumber_',['../classVirtualBoard.html#a2bff9ecf7b7ccd341218d1d6ce5cb901',1,'VirtualBoard']]],
+  ['point_73',['Point',['../classPoint.html',1,'Point'],['../classVirtualBoard.html#a3329f62913be10d71a6192065fa2c30e',1,'VirtualBoard::point()'],['../classPoint.html#ad92f2337b839a94ce97dcdb439b4325a',1,'Point::Point()'],['../classPoint.html#aaad93071cb4e23d32172748e80367d3e',1,'Point::Point(const Point &amp;source)']]],
+  ['point_2eh_74',['point.h',['../point_8h.html',1,'']]],
+  ['points_5f_75',['points_',['../classVirtualBoard.html#aff4e922e853cde98f00421983251cd96',1,'VirtualBoard']]]
 ];

@@ -1,8 +1,8 @@
-#ifndef TYPETREE_FREESTYLE_H
-#define TYPETREE_FREESTYLE_H
+#ifndef TYPETREE_FREESTYLE_H_
+#define TYPETREE_FREESTYLE_H_
 
 #include "chesstype.h"
-#include "stonestatus.h"
+#include "enum.h"
 #include "typetree.h"
 
 class TypeTreeFreeStyle : public TypeTree {
@@ -11,7 +11,7 @@ class TypeTreeFreeStyle : public TypeTree {
 
  private:
     /** The singleton instance. */
-    static TypeTreeFreeStyle* singleton;
+    static TypeTreeFreeStyle* singleton_;
 
     TypeTreeFreeStyle();
 

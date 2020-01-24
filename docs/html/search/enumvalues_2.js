@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['white_149',['WHITE',['../stonestatus_8h.html#ab16036062650d7ebef4da2227ef2a0d1a283fc479650da98250635b9c3c0e7e50',1,'stonestatus.h']]]
+  ['losing_282',['LOSING',['../enum_8h.html#a881b49e3802366255ad852f1c8624fd1aa5e74874384809719763cfd5fb6e5a7f',1,'enum.h']]]
 ];

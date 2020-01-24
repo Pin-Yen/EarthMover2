@@ -2,7 +2,7 @@
 #define POINT_H_
 
 #include "chesstype.h"
-#include "stonestatus.h"
+#include "enum.h"
 
 class Point {
  public:
@@ -17,19 +17,19 @@ class Point {
 
   ~Point() {}
 
-  class HorizontalNeighborAccessor;
-  class VerticalNeighborAccessor;
-  class DiagonalANeighborAccessor;
-  class DiagonalBNeighborAccessor;
+  // class HorizontalNeighborAccessor;
+  // class VerticalNeighborAccessor;
+  // class DiagonalANeighborAccessor;
+  // class DiagonalBNeighborAccessor;
 
-  /** 
+  /** DEPRECATED
    * Set the neighor of the point
    * @param which Which neighbor (0~7).
    * @param neighbor The neighboring point.
    */
-  void setNeighbor(int which, Point* neighbor) {
-    this->neighbor[which] = neighbor;
-  }
+  // void setNeighbor(int which, Point* neighbor) {
+  //   this->neighbor[which] = neighbor;
+  // }
 
   void setStatus(StoneStatus status) { status_ = status; }
   StoneStatus status() const { return status_; }
@@ -49,13 +49,17 @@ class Point {
   ChessType& type(int index) { return type_[index]; }
   ChessType* type() { return type_; }
 
+  void setType(ChessType type, int direction) { type_[direction] = type; }
+
+
  private:
   // chess type array
   // index: 0→ 1↓ 2↗ 3↘
   ChessType type_[4];
 
   /** Pointer to neighboring points, indexed clockwise starting from the left*/
-  Point* neighbor[8];
+  // DEPRECATED
+  // Point* neighbor[8];
 
   /** point's stone status */
   StoneStatus status_;
@@ -65,54 +69,54 @@ class Point {
 };
 
 
-class NeighborAccessor {
- public:
-    virtual Point* backward(Point *point) = 0;
-    virtual Point* forward(Point *point) = 0;
-};
+// class NeighborAccessor {
+//  public:
+//     virtual Point* backward(Point *point) = 0;
+//     virtual Point* forward(Point *point) = 0;
+// };
 
-class Point::VerticalNeighborAccessor : public NeighborAccessor{
- public:
-    Point* backward(Point *point) {
-        return point->neighbor[2];
-    }
+// class Point::VerticalNeighborAccessor : public NeighborAccessor{
+//  public:
+//     Point* backward(Point *point) {
+//         return point->neighbor[2];
+//     }
 
-    Point* forward(Point *point) {
-        return point->neighbor[6];
-    }
-};
+//     Point* forward(Point *point) {
+//         return point->neighbor[6];
+//     }
+// };
 
-class Point::HorizontalNeighborAccessor : public NeighborAccessor{
- public:
-    Point* backward(Point *point) {
-        return point->neighbor[0];
-    }
+// class Point::HorizontalNeighborAccessor : public NeighborAccessor{
+//  public:
+//     Point* backward(Point *point) {
+//         return point->neighbor[0];
+//     }
 
-    Point* forward(Point *point) {
-        return point->neighbor[4];
-    }
-};
+//     Point* forward(Point *point) {
+//         return point->neighbor[4];
+//     }
+// };
 
-class Point::DiagonalANeighborAccessor : public NeighborAccessor{
- public:
-    Point* backward(Point *point) {
-        return point->neighbor[1];
-    }
+// class Point::DiagonalANeighborAccessor : public NeighborAccessor{
+//  public:
+//     Point* backward(Point *point) {
+//         return point->neighbor[1];
+//     }
 
-    Point* forward(Point *point) {
-        return point->neighbor[5];
-    }
-};
+//     Point* forward(Point *point) {
+//         return point->neighbor[5];
+//     }
+// };
 
-class Point::DiagonalBNeighborAccessor : public NeighborAccessor{
- public:
-    Point* backward(Point *point) {
-        return point->neighbor[3];
-    }
+// class Point::DiagonalBNeighborAccessor : public NeighborAccessor{
+//  public:
+//     Point* backward(Point *point) {
+//         return point->neighbor[3];
+//     }
 
-    Point* forward(Point *point) {
-        return point->neighbor[7];
-    }
-};
+//     Point* forward(Point *point) {
+//         return point->neighbor[7];
+//     }
+// };
 
 #endif 

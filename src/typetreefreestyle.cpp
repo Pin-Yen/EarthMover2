@@ -5,19 +5,19 @@
 TypeTreeFreeStyle::TypeTreeFreeStyle() {}
 
 void TypeTreeFreeStyle::setAnalyzeLength() {
-    analyzeLength = 9;
+    analyzeLength_ = 9;
 }
 
 // initialize singleton instance to NULL
-TypeTreeFreeStyle* TypeTreeFreeStyle::singleton = NULL;
+TypeTreeFreeStyle* TypeTreeFreeStyle::singleton_ = NULL;
 
 TypeTreeFreeStyle* TypeTreeFreeStyle::getInstance() {
-  if (TypeTreeFreeStyle::singleton == NULL) {
-    TypeTreeFreeStyle::singleton = new TypeTreeFreeStyle();
-    TypeTreeFreeStyle::singleton->init();
+  if (TypeTreeFreeStyle::singleton_ == NULL) {
+    TypeTreeFreeStyle::singleton_ = new TypeTreeFreeStyle();
+    TypeTreeFreeStyle::singleton_->init();
   }
 
-  return TypeTreeFreeStyle::singleton;
+  return TypeTreeFreeStyle::singleton_;
 }
 
 SingleType TypeTreeFreeStyle::typeAnalyze(StoneStatus *status,
@@ -28,7 +28,7 @@ SingleType TypeTreeFreeStyle::typeAnalyze(StoneStatus *status,
   // under the following, we call this chess group "center group" (CG)
   // for example: --X O*OOX-- ; OOOO* O X
   //                  ^^^^      ^^^^^
-  for (int move = -1, start = analyzeLength / 2 - 1;
+  for (int move = -1, start = analyzeLength_ / 2 - 1;
        move <= 1; move += 2, start += 2) {
     for (int i = 0, checkPoint = start; i < 4; ++i, checkPoint += move) {
       if (status[checkPoint] != color) break;
@@ -43,7 +43,7 @@ SingleType TypeTreeFreeStyle::typeAnalyze(StoneStatus *status,
     // CG's length < 5
 
     // play at the analize point
-    status[analyzeLength / 2] = color;
+    status[analyzeLength_ / 2] = color;
 
     // try to find the left and right bound of CG
     // if it's empty, see this point as new analize point
@@ -52,7 +52,7 @@ SingleType TypeTreeFreeStyle::typeAnalyze(StoneStatus *status,
     bool lInit = false, rInit = false;
     int level = 0;
 
-    for (int move = -1, start = analyzeLength / 2 - 1;
+    for (int move = -1, start = analyzeLength_ / 2 - 1;
          move <= 1; move += 2, start += 2) {
       for (int count = 0, checkPoint = start;
            count < 4; ++count, checkPoint += move) {
@@ -64,14 +64,14 @@ SingleType TypeTreeFreeStyle::typeAnalyze(StoneStatus *status,
           // if the bound is an empty point
           if (status[checkPoint] == EMPTY) {
             // make a new status array
-            StoneStatus newStatus[analyzeLength];
+            StoneStatus newStatus[analyzeLength_];
 
             // transform from origin status
-            for (int i = 0; i < analyzeLength; ++i) {
-              int transformation_index = i - (analyzeLength / 2 - checkPoint);
+            for (int i = 0; i < analyzeLength_; ++i) {
+              int transformation_index = i - (analyzeLength_ / 2 - checkPoint);
 
               if (transformation_index < 0 ||
-                  transformation_index >= analyzeLength)
+                  transformation_index >= analyzeLength_)
                 // if out of bound, set it to bound
                 newStatus[i] = BOUND;
               else
@@ -127,7 +127,7 @@ SingleType TypeTreeFreeStyle::typeAnalyze(StoneStatus *status,
     }
 
     // restore the analize point to empty
-    status[analyzeLength / 2] = EMPTY;
+    status[analyzeLength_ / 2] = EMPTY;
 
     // keep lType > rType
     if (lType < rType)
