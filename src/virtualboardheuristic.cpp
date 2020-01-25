@@ -1,10 +1,6 @@
 #include "virtualboardheuristic.h"
 
 
-VirtualBoardHeuristic* VirtualBoardHeuristic::clone() {
-  return new VirtualBoardHeuristic(*this);
-}
-
 VirtualBoardHeuristic::VirtualBoardHeuristic(VirtualBoardHeuristic& source)
   : VirtualBoard(source) {
   typeTree_ = source.typeTree_;

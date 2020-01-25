@@ -7,16 +7,31 @@
 
 class VirtualBoardHeuristicRenjuBasic : public VirtualBoardHeuristic {
   public:
+    VirtualBoardHeuristicRenjuBasic* clone() {
+        return new VirtualBoardHeuristicRenjuBasic(*this);
+    }
     static VirtualBoardHeuristicRenjuBasic* create(int dimension) {
         VirtualBoardHeuristicRenjuBasic *board = new VirtualBoardHeuristicRenjuBasic(dimension);
-        board->typeTree_ = TypeTreeRenjuBasic::getInstance();
-        board->evaluator_ = EvaluatorRenjuBasic::getInstance();
+        board->setTypeTree();
+        board->setEvaluator();
         board->init();
         return board;
     }
   
   private:
-    VirtualBoardHeuristicRenjuBasic(int dimension): VirtualBoardHeuristic(dimension){};   
+
+    void setTypeTree() {
+        typeTree_ = TypeTreeRenjuBasic::getInstance();
+    }
+
+    void setEvaluator() {
+        evaluator_ = EvaluatorRenjuBasic::getInstance();
+    }
+    VirtualBoardHeuristicRenjuBasic(VirtualBoardHeuristicRenjuBasic& source)
+     : VirtualBoardHeuristic(source) {};
+    VirtualBoardHeuristicRenjuBasic(int dimension): VirtualBoardHeuristic(dimension){};
+
+
 };
 
 #endif

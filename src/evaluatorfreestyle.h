@@ -5,10 +5,6 @@
 
 class EvaluatorFreeStyle : public Evaluator {
  public:
-    
-    // static GameStatus checkWinOrLose(int score) {
-    //     return score >= SCORE_WIN ? WINNING : NOTHING;
-    // }
 
     GameStatus checkWinOrLose(Point& point, int who) {
         int score = point.absScore(who);

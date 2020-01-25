@@ -14,6 +14,7 @@ class VirtualBoard {
     ~VirtualBoard();
 
     virtual VirtualBoard* clone() = 0;
+
     /**
      * Plays a chess on the board.
      * Re-evaluates point scores according to the new move.
@@ -51,15 +52,38 @@ class VirtualBoard {
      */
     int getHSI(bool ignoreIndex[]);
 
-    // get who turn, black = 0, white = 1
+    /** 
+     * @return 0 for black's turn, 1 for white's turn.
+     */
     bool whoTurn() { return (playNumber_ & 1); }
     
     class NeighborIterator {
        public:
+
+          /**
+           * @param board The board to iterate
+           * @param index The index of the start point to iterate from.
+           * @param direction The direction to iterate. 0~7 starting from the left, clockwise.
+           */
           NeighborIterator(VirtualBoard *board, int index, int direction);
+
+          /**
+           * @param board The board to iterate
+           * @param iter The start point of the new iterator will be the current point of iter
+           * @ direction The direction to iterate. 0~7 starting from the left, clockwise. 
+           */
           NeighborIterator(VirtualBoard *board, NeighborIterator& iter, int direction);
+
+          /**
+           * @return The next point, according to `direction`, NULL if reached bound.
+           */
           Point* next();
+
+          /** reset the position of the iterator to its starting point,
+           * and reverse the direction for subsequent calls to next().
+           */
           void resetAndReverse();
+          
        private:
           VirtualBoard *board_;
           int startIndex_, currentIndex_, direction_;

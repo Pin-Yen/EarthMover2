@@ -14,6 +14,7 @@ class Evaluator {
     
     /**
      * Set score of each point, with the global context taken into consideration.
+     * Should only be called after local score is evaluated. see evaluateLocalScore()
      * 1. Use opening tree during early stage
      * 2. Set points with insignificant scores (compared to highest score) to 0.
      * @param points The points on the chessboard (flattened into 1d vectory).
@@ -29,14 +30,15 @@ class Evaluator {
      */
     virtual void evaluateLocalScore(Point& point) = 0;
 
-    /** TODO: DEPRECATE
-     * Chech if the given score is a winning score / losing score / nothing.
-     * @param score The score to be checked.
-     * @return The type of the score.
-     */
-    // virtual GameStatus checkWinOrLose(int score) = 0;
 
+    /**
+     * Check whether the player win or loses after the point is played.
+     * @param point The point to be checked
+     * @param who The player to be checked
+     * @return The game status after the player plays on point.
+     */
     virtual GameStatus checkWinOrLose(Point& point, int who) = 0;
+    
     static const int SCORE_WIN = 10000000;
     static const int SCORE_FORBIDDEN = -100;
 

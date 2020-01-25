@@ -13,12 +13,17 @@
 
 class OpeningTree {
  public:
-  // initialize opening tree
 
   OpeningTree();
 
+  /** initialize opening tree */
   static void init();
 
+  /**
+   * Returns the suggested move based on the given board situations.
+   * @param points The poins on the board.
+   * @return The index of the suggested move. 
+   */
   static int classify(std::vector<Point*>& points);
 
  private:
@@ -36,13 +41,13 @@ class OpeningTree {
     Node *childNode[5][5][2];
   };
 
-  // rotate "table" 90 degrees clockwise
+  /** rotate "table" 90 degrees clockwise */
   static void rotate(char table[5][5]);
 
-  // mirror "table" by swapping table's rows and columns
+  /**  mirror "table" by swapping table's rows and columns */
   static void mirror(char table[5][5]);
 
-  // insert "table" to tree
+  /** insert "table" to tree */
   static void insert(char table[5][5]);
 
   static Node* root;

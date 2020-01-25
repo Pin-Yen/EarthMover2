@@ -8,7 +8,7 @@
 class VirtualBoardHeuristic : public VirtualBoard {
  public:
 
-    VirtualBoardHeuristic* clone() final;
+    virtual VirtualBoardHeuristic* clone() = 0;
     static VirtualBoardHeuristic* create(int dimen);
 
     GameStatus play(int index) ;
@@ -18,14 +18,25 @@ class VirtualBoardHeuristic : public VirtualBoard {
     void undo(int index);
 
  protected:
+    
     VirtualBoardHeuristic(int dimen);
 
+    VirtualBoardHeuristic(VirtualBoardHeuristic& source);
+
+    /** Should be implement by subclass to set typetree. */
+    virtual void setTypeTree() = 0;
+
+    /**Should be implement by subclass to set evaluator. */
+    virtual void setEvaluator() = 0;
+
+    /** Should be set by subclass */
     TypeTree *typeTree_;
+
+    /** shoud be set by subclass */
     Evaluator *evaluator_;
 
  private:
 
-    VirtualBoardHeuristic(VirtualBoardHeuristic& source);
 
     void evaluateNeighbors(int index);
 

@@ -7,16 +7,29 @@
 
 class VirtualBoardHeuristicFreeStyle : public VirtualBoardHeuristic {
   public:
+    VirtualBoardHeuristicFreeStyle* clone() {
+        return new VirtualBoardHeuristicFreeStyle(*this);
+    }
     static VirtualBoardHeuristicFreeStyle* create(int dimension) {
         VirtualBoardHeuristicFreeStyle *board = new VirtualBoardHeuristicFreeStyle(dimension);
-        board->typeTree_ = TypeTreeFreeStyle::getInstance();
-        board->evaluator_ = EvaluatorFreeStyle::getInstance();
+        board->setTypeTree();
+        board->setEvaluator();
         board->init();
         return board;
     }
-  
   private:
-    VirtualBoardHeuristicFreeStyle(int dimension): VirtualBoardHeuristic(dimension){};   
+    void setTypeTree() {
+        typeTree_ = TypeTreeFreeStyle::getInstance();        
+    }
+
+    void setEvaluator() {
+        evaluator_ = EvaluatorFreeStyle::getInstance();        
+    }
+
+    VirtualBoardHeuristicFreeStyle(int dimension): VirtualBoardHeuristic(dimension){}; 
+
+    VirtualBoardHeuristicFreeStyle(VirtualBoardHeuristicFreeStyle& source)
+     : VirtualBoardHeuristic(source) {};  
 };
 
 #endif
