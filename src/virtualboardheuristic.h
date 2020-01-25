@@ -9,7 +9,7 @@ class VirtualBoardHeuristic : public VirtualBoard {
  public:
 
     virtual VirtualBoardHeuristic* clone() = 0;
-    static VirtualBoardHeuristic* create(int dimen);
+    // static VirtualBoardHeuristic* create(int dimen);
 
     GameStatus play(int index) ;
 
