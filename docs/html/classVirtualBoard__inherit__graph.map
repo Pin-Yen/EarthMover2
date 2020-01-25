@@ -1,6 +1,0 @@
-<map id="VirtualBoard" name="VirtualBoard">
-<area shape="rect" id="node1" title=" " alt="" coords="112,5,283,317"/>
-<area shape="rect" id="node2" href="$classVirtualBoardHeuristic.html" title=" " alt="" coords="115,365,279,560"/>
-<area shape="rect" id="node3" href="$classVirtualBoardHeuristicFreeStyle.html" title=" " alt="" coords="5,608,184,729"/>
-<area shape="rect" id="node4" href="$classVirtualBoardHeuristicRenjuBasic.html" title=" " alt="" coords="208,608,395,729"/>
-</map>
