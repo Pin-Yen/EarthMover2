@@ -1,5 +1,0 @@
-1,4d0
-<     // index: 0→ 1↓ 2↗ 3↘
-<     const int dir[4][2] = {{0, 1}, {1, 0}, {-1, 1}, {1, 1}};
-<     const int row = index / 15, col = index % 15;
-< 
