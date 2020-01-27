@@ -56,6 +56,9 @@ class VirtualBoard {
      * @return 0 for black's turn, 1 for white's turn.
      */
     bool whoTurn() { return (playNumber_ & 1); }
+
+    /** @return The number of points on the board. */
+    int length() { return dimen_ * dimen_; }
     
     class NeighborIterator {
        public:
