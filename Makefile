@@ -44,6 +44,8 @@ OBJ_DIR = obj
 TEST_SRC_DIR = test
 TEST_OBJ_DIR = testobj
 
+SELFPLAY_SRC_DIR = selfplay
+
 SRC = $(wildcard $(SRC_DIR)/*.cpp)
 OBJ = $(SRC:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
 
@@ -70,6 +72,9 @@ test_virtualboard: $(OBJ)
 
 test_montecarlo: $(OBJ)
 	$(CC) $(TEST_SRC_DIR)/testmontecarlo.cpp $(CPPFLAGS)  $(LDFLAGS) $^ $(LDLIBS) -o $@
+
+selfplay_freestyle: $(OBJ)
+	$(CC) $(SELFPLAY_SRC_DIR)/selfplay.cpp $(CPPFLAGS)  $(LDFLAGS) $^ $(LDLIBS) -o $@
 
 $(TESTOBJ_DIR)/%.o: $(TEST_SRC_DIR)/%.cpp testobj_dir
 	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
