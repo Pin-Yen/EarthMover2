@@ -73,6 +73,9 @@ test_virtualboard: $(OBJ)
 test_montecarlo: $(OBJ)
 	$(CC) $(TEST_SRC_DIR)/testmontecarlo.cpp $(CPPFLAGS)  $(LDFLAGS) $^ $(LDLIBS) -o $@
 
+test_randomplay: $(OBJ)
+	$(CC) $(TEST_SRC_DIR)/testrandomplay.cpp $(CPPFLAGS)  $(LDFLAGS) $^ $(LDLIBS) -o $@
+
 selfplay_freestyle: $(OBJ)
 	$(CC) $(SELFPLAY_SRC_DIR)/selfplay.cpp $(CPPFLAGS)  $(LDFLAGS) $^ $(LDLIBS) -o $@
 

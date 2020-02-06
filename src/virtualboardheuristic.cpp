@@ -1,5 +1,7 @@
 #include "virtualboardheuristic.h"
 
+#include <time.h>
+#include <stdlib.h>
 
 VirtualBoardHeuristic::VirtualBoardHeuristic(VirtualBoardHeuristic& source)
   : VirtualBoard(source) {
@@ -44,6 +46,26 @@ GameStatus VirtualBoardHeuristic::play(int index) {
     evaluator_->evaluateGlobalScore(points_, playNumber_);
 
     return NOTHING;
+}
+
+int VirtualBoardHeuristic::randomValidIndex() {
+  srand(time(NULL));
+  int validMoves = dimen_ * dimen_ - playNumber_;
+  int randomIndex = rand() % validMoves;
+
+  int count = 0, index = 0;
+  for (Point* point : points_) {
+    ++index;
+    if (point->status() != EMPTY) continue;
+
+    if (count == randomIndex) {
+      return index - 1; // Should always return at here.
+    }
+    ++count;
+  } 
+
+  assert(0);
+  return -1;
 }
 
 void VirtualBoardHeuristic::undo(int index) {

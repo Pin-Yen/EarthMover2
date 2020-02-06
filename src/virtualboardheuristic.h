@@ -11,7 +11,10 @@ class VirtualBoardHeuristic : public VirtualBoard {
     virtual VirtualBoardHeuristic* clone() = 0;
     // static VirtualBoardHeuristic* create(int dimen);
 
-    GameStatus play(int index) ;
+    GameStatus play(int index);
+
+    // TODO: check if there is no valid move.
+    int randomValidIndex();
 
     void init();
     

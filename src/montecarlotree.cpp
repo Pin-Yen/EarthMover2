@@ -3,6 +3,7 @@
 #include <assert.h>
 
 #include <algorithm>
+#include <utility>
 #include <iomanip>
 #include <iostream>
 #include <thread>
@@ -342,7 +343,12 @@ WhoWin MonteCarloTree::play(int index) {
     default:
       assert(0);
   }
+}
 
+std::pair<WhoWin, int> MonteCarloTree::randomPlay() {
+  int index = currentBoard_->randomValidIndex();
+
+  return std::make_pair(play(index), index);
 }
 
 void MonteCarloTree::pass() {

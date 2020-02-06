@@ -36,6 +36,10 @@ WhoWin MonteCarloAI::play(int index) {
   return tree_->play(index);
 }
 
+std::pair<WhoWin, int> MonteCarloAI::randomPlay() {
+  return tree_->randomPlay();
+}
+
 void MonteCarloAI::reset(int level, Rule rule) {
   VirtualBoard* vb;
 

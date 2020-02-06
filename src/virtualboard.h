@@ -23,6 +23,13 @@ class VirtualBoard {
      */
     virtual GameStatus play(int index) = 0;
 
+    /**
+     * return a random valid index.
+     * When generating self-play games for dnn training,
+     * a few random moves can diversifying the games.
+     */ 
+    virtual int randomValidIndex() = 0;
+
     /** TODO: Check if the return value can be removed*/ 
     int pass() {  ++playNumber_; return dimen_*dimen_; }
     

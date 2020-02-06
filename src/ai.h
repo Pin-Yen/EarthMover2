@@ -2,11 +2,14 @@
 #define AI_H_
 
 #include <string>
+#include <utility>
 #include "enum.h"
 
 class AI {
  public:
     virtual WhoWin play(int) = 0;
+
+    virtual std::pair<WhoWin, int> randomPlay() = 0;
 
     virtual int think() = 0;
 

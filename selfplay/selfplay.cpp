@@ -2,6 +2,9 @@
 
 #include <iostream>
 #include <fstream>
+#include <utility>
+#include <time.h>
+#include <stdlib.h>
 
 #include "displayboard.h"
 #include "montecarloai.h"
@@ -23,28 +26,48 @@ void selfplay(std::ofstream *file, AI *ai, Rule rule, int aiLevel) {
 
 	    // Tie
 	    if (indexToPlay == -1) {
-	    	*file << "T\n"; break;
+	    	*file << "T\n"; 
+	    	std::cout << "TIE" << std::endl;
+	    	break;
+	    }
+
+	    WhoWin whoWin;
+
+	    if (rand() % 100 < 10) {
+	    	std::pair<WhoWin, int> randomResult = ai->randomPlay();
+	    	whoWin = randomResult.first;
+	    	indexToPlay = randomResult.second;
+	    	*file << "R";
+	    	std::cout << "R";
+	    } else {
+	    	whoWin = ai->play(indexToPlay);
 	    }
 
 	    *file << indexToPlay << " ";
-
-	    WhoWin whoWin = ai->play(indexToPlay);
+	    std::cout << indexToPlay << std::endl;
+	    
 
 	    if (whoWin == BLACK_WIN) {
-	        *file << "B\n"; break;
+	        *file << "B\n"; 
+	        std::cout << "B WIN" << std::endl;
+	        break;
 	    } else if (whoWin == WHITE_WIN) {
-	        *file << "W\n"; break;
+	        *file << "W\n"; 
+	        std::cout << "W WIN" << std::endl;
+	        break;
 	    }
 	}
 }
 
 int main() {
+	srand(time(NULL));
     AI *ai = new MonteCarloAI();
     std::ofstream file("selfplay_freestyle.txt");
 
-    for (int i = 0; i < 1; ++i) {
-    	printGameInfo(&file, i+1, GOMOKU_FREESTYLE, 2);
-    	selfplay(&file, ai, GOMOKU_FREESTYLE, 2);
+    for (int i = 0; i < 2; ++i) {
+    	printGameInfo(&file, i+1, GOMOKU_FREESTYLE, 0);
+    	std::cout << "GAME " << i+1 << std::endl;
+    	selfplay(&file, ai, GOMOKU_FREESTYLE, 0);
     }
 
     file.close();

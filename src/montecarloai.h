@@ -11,6 +11,8 @@ class MonteCarloAI : public AI {
 
     WhoWin play(int);
 
+    std::pair<WhoWin, int> randomPlay();
+
     void reset(int level, Rule rule);
 
     void resign() {};

@@ -46,6 +46,9 @@ class MonteCarloTree {
   // updates the current node and return game status.
   WhoWin play(int index);
 
+  // Play a random valid move.
+  std::pair<WhoWin, int> randomPlay();
+
   // pass
   void pass();
 
