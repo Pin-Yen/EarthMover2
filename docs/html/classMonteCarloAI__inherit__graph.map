@@ -1,0 +1,3 @@
+<map id="MonteCarloAI" name="MonteCarloAI">
+<area shape="rect" id="node2" href="$classAI.html" title="{AI\n||+ play()\l+ randomPlay()\l+ think()\l+ reset()\l+ resign()\l+ undo()\l+ ponder()\l+ getTreeJSON()\l}" alt="" coords="55,5,178,185"/>
+</map>

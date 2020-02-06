@@ -1,0 +1,5 @@
+<map id="VirtualBoard" name="VirtualBoard">
+<area shape="rect" id="node2" href="$classVirtualBoardHeuristic.html" title="{VirtualBoardHeuristic\n|# typeTree_\l# evaluator_\l|+ clone()\l+ play()\l+ randomValidIndex()\l+ init()\l+ undo()\l# VirtualBoardHeuristic()\l# VirtualBoardHeuristic()\l# setTypeTree()\l# setEvaluator()\l&#45; evaluateNeighbors()\l}" alt="" coords="115,395,279,619"/>
+<area shape="rect" id="node3" href="$classVirtualBoardHeuristicFreeStyle.html" title="{VirtualBoardHeuristicFree\lStyle\n||+ clone()\l+ create()\l&#45; setTypeTree()\l&#45; setEvaluator()\l&#45; VirtualBoardHeuristicFree\lStyle()\l&#45; VirtualBoardHeuristicFree\lStyle()\l}" alt="" coords="5,667,184,861"/>
+<area shape="rect" id="node4" href="$classVirtualBoardHeuristicRenjuBasic.html" title="{VirtualBoardHeuristicRenju\lBasic\n||+ clone()\l+ create()\l&#45; setTypeTree()\l&#45; setEvaluator()\l&#45; VirtualBoardHeuristicRenju\lBasic()\l&#45; VirtualBoardHeuristicRenju\lBasic()\l}" alt="" coords="208,667,395,861"/>
+</map>

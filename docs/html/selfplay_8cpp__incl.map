@@ -1,0 +1,11 @@
+<map id="selfplay/selfplay.cpp" name="selfplay/selfplay.cpp">
+<area shape="rect" id="node7" href="$displayboard_8h.html" title="displayboard.h" alt="" coords="737,155,844,181"/>
+<area shape="rect" id="node9" href="$montecarloai_8h.html" title="montecarloai.h" alt="" coords="360,80,467,107"/>
+<area shape="rect" id="node12" href="$enum_8h.html" title="enum.h" alt="" coords="431,379,497,405"/>
+<area shape="rect" id="node10" href="$ai_8h.html" title="ai.h" alt="" coords="243,155,285,181"/>
+<area shape="rect" id="node13" href="$montecarlotree_8h.html" title="montecarlotree.h" alt="" coords="354,155,473,181"/>
+<area shape="rect" id="node15" href="$memorypool_8h.html" title="memorypool.h" alt="" coords="295,229,399,256"/>
+<area shape="rect" id="node17" href="$virtualboard_8h.html" title="virtualboard.h" alt="" coords="569,229,669,256"/>
+<area shape="rect" id="node20" href="$point_8h.html" title="point.h" alt="" coords="676,304,737,331"/>
+<area shape="rect" id="node21" href="$chesstype_8h.html" title="chesstype.h" alt="" coords="660,379,753,405"/>
+</map>

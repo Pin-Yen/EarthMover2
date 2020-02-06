@@ -1,0 +1,31 @@
+<map id="src/enum.h" name="src/enum.h">
+<area shape="rect" id="node2" href="$selfplay_8cpp.html" title="selfplay/selfplay.cpp" alt="" coords="44,379,185,405"/>
+<area shape="rect" id="node3" href="$ai_8h.html" title="src/ai.h" alt="" coords="137,80,202,107"/>
+<area shape="rect" id="node5" href="$montecarloai_8cpp.html" title="src/montecarloai.cpp" alt="" coords="471,453,614,480"/>
+<area shape="rect" id="node6" href="$point_8h.html" title="src/point.h" alt="" coords="867,80,949,107"/>
+<area shape="rect" id="node19" href="$virtualboard_8h.html" title="src/virtualboard.h" alt="" coords="649,155,772,181"/>
+<area shape="rect" id="node20" href="$montecarlotree_8h.html" title="src/montecarlotree.h" alt="" coords="277,229,419,256"/>
+<area shape="rect" id="node21" href="$montecarlotree_8cpp.html" title="src/montecarlotree.cpp" alt="" coords="260,379,415,405"/>
+<area shape="rect" id="node22" href="$node_8h.html" title="src/node.h" alt="" coords="381,304,464,331"/>
+<area shape="rect" id="node24" href="$typetree_8h.html" title="src/typetree.h" alt="" coords="857,229,959,256"/>
+<area shape="rect" id="node25" href="$typetreefreestyle_8h.html" title="src/typetreefreestyle.h" alt="" coords="595,304,747,331"/>
+<area shape="rect" id="node27" href="$typetreerenjubasic_8h.html" title="src/typetreerenjubasic.h" alt="" coords="1438,304,1599,331"/>
+<area shape="rect" id="node4" href="$montecarloai_8h.html" title="src/montecarloai.h" alt="" coords="105,304,234,331"/>
+<area shape="rect" id="node7" href="$evaluator_8h.html" title="src/evaluator.h" alt="" coords="1145,229,1253,256"/>
+<area shape="rect" id="node17" href="$openingtree_8h.html" title="src/openingtree.h" alt="" coords="991,155,1113,181"/>
+<area shape="rect" id="node8" href="$evaluator_8cpp.html" title="src/evaluator.cpp" alt="" coords="1291,304,1413,331"/>
+<area shape="rect" id="node9" href="$evaluatorfreestyle_8h.html" title="src/evaluatorfreestyle.h" alt="" coords="1107,304,1266,331"/>
+<area shape="rect" id="node12" href="$evaluatorrenjubasic_8h.html" title="src/evaluatorrenjubasic.h" alt="" coords="1623,304,1790,331"/>
+<area shape="rect" id="node15" href="$virtualboardheuristic_8h.html" title="src/virtualboardheuristic.h" alt="" coords="912,304,1083,331"/>
+<area shape="rect" id="node10" href="$evaluatorfreestyle_8cpp.html" title="src/evaluatorfreestyle.cpp" alt="" coords="1207,379,1379,405"/>
+<area shape="rect" id="node11" href="$virtualboardheuristicfreestyle_8h.html" title="src/virtualboardheuristicfreestyle.h" alt="" coords="752,379,973,405"/>
+<area shape="rect" id="node13" href="$evaluatorrenjubasic_8cpp.html" title="src/evaluatorrenjubasic.cpp" alt="" coords="1857,379,2039,405"/>
+<area shape="rect" id="node14" href="$virtualboardheuristicrenjubasic_8h.html" title="src/virtualboardheuristicrenjubasic.h" alt="" coords="1403,379,1634,405"/>
+<area shape="rect" id="node16" href="$virtualboardheuristic_8cpp.html" title="src/virtualboardheuristic.cpp" alt="" coords="998,379,1183,405"/>
+<area shape="rect" id="node18" href="$openingtree_8cpp.html" title="src/openingtree.cpp" alt="" coords="984,229,1120,256"/>
+<area shape="rect" id="node23" href="$node_8cpp.html" title="src/node.cpp" alt="" coords="439,379,537,405"/>
+<area shape="rect" id="node30" href="$virtualboard_8cpp.html" title="src/virtualboard.cpp" alt="" coords="645,229,781,256"/>
+<area shape="rect" id="node29" href="$typetree_8cpp.html" title="src/typetree.cpp" alt="" coords="771,304,887,331"/>
+<area shape="rect" id="node26" href="$typetreefreestyle_8cpp.html" title="src/typetreefreestyle.cpp" alt="" coords="561,379,727,405"/>
+<area shape="rect" id="node28" href="$typetreerenjubasic_8cpp.html" title="src/typetreerenjubasic.cpp" alt="" coords="1658,379,1833,405"/>
+</map>

@@ -1,0 +1,31 @@
+# This file is modified from:
+# https://gist.github.com/vidavidorra/548ffbcdae99d752da02#gistcomment-2090221
+
+sudo: false
+
+# Whitelist
+branches:
+  only:
+    - master
+
+# Install dependencies
+addons:
+  apt:
+    packages:
+      - doxygen
+      - doxygen-doc
+      - doxygen-latex
+      - doxygen-gui
+      - graphviz
+
+# Build your code e.g. by calling make
+script:
+  - doxygen Doxyfile
+
+# Deploy using travis builtin GitHub Pages support
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master

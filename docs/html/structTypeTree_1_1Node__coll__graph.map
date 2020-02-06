@@ -1,0 +1,4 @@
+<map id="TypeTree::Node" name="TypeTree::Node">
+<area shape="rect" id="node2" href="$classChessType.html" title="{ChessType\n||+ ChessType()\l+ ChessType()\l+ ChessType()\l+ ~ChessType()\l+ length()\l+ life()\l+ level()\l+ operator==()\l+ operator!=()\l}" alt="" coords="5,476,123,671"/>
+<area shape="rect" id="node3" href="$classSingleType.html" title="{SingleType\n||+ SingleType()\l+ SingleType()\l+ SingleType()\l+ length()\l+ life()\l+ level()\l+ operator==()\l+ operator!=()\l+ operator\&gt;()\l+ operator\&lt;()\l+ operator\&gt;=()\l+ operator\&lt;=()\l}" alt="" coords="11,175,117,413"/>
+</map>

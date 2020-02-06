@@ -1,0 +1,4 @@
+<map id="TypeTree" name="TypeTree">
+<area shape="rect" id="node2" href="$classTypeTreeFreeStyle.html" title="{TypeTreeFreeStyle\n|&#45; singleton_\l|+ getInstance()\l&#45; TypeTreeFreeStyle()\l&#45; setAnalyzeLength()\l&#45; typeAnalyze()\l}" alt="" coords="5,263,155,384"/>
+<area shape="rect" id="node3" href="$classTypeTreeRenjuBasic.html" title="{TypeTreeRenjuBasic\n|&#45; singleton_\l|+ getInstance()\l&#45; TypeTreeRenjuBasic()\l&#45; setAnalyzeLength()\l&#45; typeAnalyze()\l}" alt="" coords="179,263,339,384"/>
+</map>

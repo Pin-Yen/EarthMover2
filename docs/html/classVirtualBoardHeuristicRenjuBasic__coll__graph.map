@@ -1,0 +1,11 @@
+<map id="VirtualBoardHeuristicRenjuBasic" name="VirtualBoardHeuristicRenjuBasic">
+<area shape="rect" id="node2" href="$classVirtualBoardHeuristic.html" title="{VirtualBoardHeuristic\n||+ clone()\l+ play()\l+ randomValidIndex()\l+ init()\l+ undo()\l# VirtualBoardHeuristic()\l# VirtualBoardHeuristic()\l# setTypeTree()\l# setEvaluator()\l&#45; evaluateNeighbors()\l}" alt="" coords="284,1351,448,1560"/>
+<area shape="rect" id="node3" href="$classVirtualBoard.html" title="{VirtualBoard\n||+ ~VirtualBoard()\l+ clone()\l+ play()\l+ randomValidIndex()\l+ pass()\l+ undo()\l+ getScore()\l+ getScoreSum()\l+ getHSI()\l+ getHSI()\l+ whoTurn()\l+ length()\l+ createNeighborIterator()\l+ createNeighborIterator()\l+ point()\l# VirtualBoard()\l# VirtualBoard()\l}" alt="" coords="90,976,261,1288"/>
+<area shape="rect" id="node6" href="$classEvaluator.html" title="{Evaluator\n||+ Evaluator()\l+ ~Evaluator()\l+ evaluateGlobalScore()\l+ evaluateLocalScore()\l+ checkWinOrLose()\l}" alt="" coords="471,1064,634,1200"/>
+<area shape="rect" id="node11" href="$classTypeTree.html" title="{TypeTree\n||+ TypeTree()\l+ classify()\l+ analyzeLength()\l# setAnalyzeLength()\l# init()\l# cutSameResultChild()\l# plantTree()\l# typeAnalyze()\l&#45; dfsGrowTree()\l}" alt="" coords="285,1035,447,1229"/>
+<area shape="rect" id="node7" href="$classOpeningTree.html" title="{OpeningTree\n||+ OpeningTree()\l+ init()\l+ classify()\l&#45; rotate()\l&#45; mirror()\l&#45; insert()\l}" alt="" coords="643,748,759,899"/>
+<area shape="rect" id="node8" href="$structOpeningTree_1_1Node.html" title="{OpeningTree::Node\n||+ Node()\l}" alt="" coords="519,535,653,612"/>
+<area shape="rect" id="node12" href="$structTypeTree_1_1Node.html" title="{TypeTree::Node\n||+ Node()\l+ ~Node()\l}" alt="" coords="151,777,267,869"/>
+<area shape="rect" id="node13" href="$classChessType.html" title="{ChessType\n||+ ChessType()\l+ ChessType()\l+ ChessType()\l+ ~ChessType()\l+ length()\l+ life()\l+ level()\l+ operator==()\l+ operator!=()\l}" alt="" coords="89,476,206,671"/>
+<area shape="rect" id="node14" href="$classSingleType.html" title="{SingleType\n||+ SingleType()\l+ SingleType()\l+ SingleType()\l+ length()\l+ life()\l+ level()\l+ operator==()\l+ operator!=()\l+ operator\&gt;()\l+ operator\&lt;()\l+ operator\&gt;=()\l+ operator\&lt;=()\l}" alt="" coords="94,175,201,413"/>
+</map>

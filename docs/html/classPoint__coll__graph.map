@@ -1,0 +1,4 @@
+<map id="Point" name="Point">
+<area shape="rect" id="node3" href="$classChessType.html" title="{ChessType\n||+ ChessType()\l+ ChessType()\l+ ChessType()\l+ ~ChessType()\l+ length()\l+ life()\l+ level()\l+ operator==()\l+ operator!=()\l}" alt="" coords="125,476,242,671"/>
+<area shape="rect" id="node4" href="$classSingleType.html" title="{SingleType\n||+ SingleType()\l+ SingleType()\l+ SingleType()\l+ length()\l+ life()\l+ level()\l+ operator==()\l+ operator!=()\l+ operator\&gt;()\l+ operator\&lt;()\l+ operator\&gt;=()\l+ operator\&lt;=()\l}" alt="" coords="130,175,237,413"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Evaluator" name="Evaluator">
+<area shape="rect" id="node2" href="$classOpeningTree.html" title="{OpeningTree\n||+ OpeningTree()\l+ init()\l+ classify()\l&#45; rotate()\l&#45; mirror()\l&#45; insert()\l}" alt="" coords="185,300,301,451"/>
+<area shape="rect" id="node3" href="$structOpeningTree_1_1Node.html" title="{OpeningTree::Node\n||+ Node()\l}" alt="" coords="5,160,140,237"/>
+</map>

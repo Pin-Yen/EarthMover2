@@ -1,0 +1,3 @@
+<map id="EvaluatorRenjuBasic" name="EvaluatorRenjuBasic">
+<area shape="rect" id="node2" href="$classEvaluator.html" title="{Evaluator\n|+ SCORE_WIN\l+ SCORE_FORBIDDEN\l# openingTree_\l|+ Evaluator()\l+ ~Evaluator()\l+ evaluateGlobalScore()\l+ evaluateLocalScore()\l+ checkWinOrLose()\l}" alt="" coords="9,5,178,171"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Evaluator" name="Evaluator">
+<area shape="rect" id="node2" href="$classEvaluatorFreeStyle.html" title="{EvaluatorFreeStyle\n|&#45; SCORE\l&#45; SCORE_DOUBLE4\l&#45; SCORE_DEAD4LIVE3\l&#45; SCORE_DOUBLELIVE3\l&#45; singleton\l|+ checkWinOrLose()\l+ evaluateLocalScore()\l+ getInstance()\l&#45; EvaluatorFreeStyle()\l}" alt="" coords="5,219,181,399"/>
+<area shape="rect" id="node3" href="$classEvaluatorRenjuBasic.html" title="{EvaluatorRenjuBasic\n|&#45; SCORE\l&#45; SCORE_DOUBLE4\l&#45; SCORE_DEAD4LIVE3\l&#45; SCORE_DOUBLELIVE3\l&#45; singleton\l|+ checkWinOrLose()\l+ evaluateLocalScore()\l+ getInstance()\l&#45; EvaluatorRenjuBasic()\l}" alt="" coords="205,219,381,399"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="TypeTree" name="TypeTree">
+<area shape="rect" id="node2" href="$structTypeTree_1_1Node.html" title="{TypeTree::Node\n||+ Node()\l+ ~Node()\l}" alt="" coords="74,748,190,840"/>
+<area shape="rect" id="node3" href="$classChessType.html" title="{ChessType\n||+ ChessType()\l+ ChessType()\l+ ChessType()\l+ ~ChessType()\l+ length()\l+ life()\l+ level()\l+ operator==()\l+ operator!=()\l}" alt="" coords="5,476,123,671"/>
+<area shape="rect" id="node4" href="$classSingleType.html" title="{SingleType\n||+ SingleType()\l+ SingleType()\l+ SingleType()\l+ length()\l+ life()\l+ level()\l+ operator==()\l+ operator!=()\l+ operator\&gt;()\l+ operator\&lt;()\l+ operator\&gt;=()\l+ operator\&lt;=()\l}" alt="" coords="11,175,117,413"/>
+</map>
